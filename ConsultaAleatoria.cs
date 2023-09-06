@@ -12,9 +12,9 @@ namespace ConsumingBreakingBadAPI
                 try
                 {
                     Console.Clear();
-                    string resposta = await client.GetStringAsync("https://api.breakingbadquotes.xyz/v1/quotes/5");
+                    string resposta = await client.GetStringAsync("https://api.breakingbadquotes.xyz/v1/quotes/1");
                     var falas = JsonSerializer.Deserialize<List<FalaPopular>>(resposta);
-                    Console.WriteLine($"\nCitacao: {falas[1].Fala}  \n\nAutor: {falas[1].Autor}");
+                    Console.WriteLine($"\nCitacao: {falas[0].Fala}  \n\nAutor: {falas[0].Autor}");
 
                 }
                 catch (Exception ex)
